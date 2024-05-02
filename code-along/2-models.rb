@@ -16,6 +16,15 @@ Company.destroy_all
 
 # 2. insert new rows in companies table
 
+new_company = Company.new
+new_company["name"] = "Apple"
+new_company["city"] = "Cupertino"
+new_company["state"] = "CA"
+new_company["url"] = "http://apple.com"
+p new_company
+new_company.save
+
+puts "There are #{Company.all.count} companies"
 # 3. query companies table to find all row with California company
 
 # 4. query companies table to find single row for Apple
